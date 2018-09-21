@@ -90,48 +90,44 @@ public class assignment {
      * For example, Alice's salary is 1000, John's salary is 500, Jenny's salary is 1200, you should print:
      * John Alice Jenny
      */
-    public void sortSalary(Employee e1, Employee e2, Employee e3) {
+    public static void sortSalary(Employee e1, Employee e2, Employee e3) {
         //write your code here
     	String[] str=new String [3];
-    	if(e1.salary>=e2.salary) {
-    		if(e2.salary>=e3.salary) {
+    	if(e1.salary<=e2.salary) {
+    		if(e2.salary<=e3.salary) {
     			str[0]=e1.name;
     			str[1]=e2.name;
     			str[2]=e3.name;
-    			System.out.print(str);
     		}else {
-    			if(e1.salary>=e3.salary) {
+    			if(e1.salary<=e3.salary) {
         			str[0]=e1.name;
         			str[1]=e3.name;
         			str[2]=e2.name;
-        			System.out.print(str);
     			}else {
         			str[0]=e3.name;
         			str[1]=e1.name;
         			str[2]=e2.name;
-        			System.out.print(str);
     			}
     		}
     	}else {
-    		if(e2.salary>=e3.salary) {
-    			if(e3.salary>=e1.salary) {
+    		if(e2.salary<=e3.salary) {
+    			if(e3.salary<=e1.salary) {
         			str[0]=e2.name;
         			str[1]=e3.name;
         			str[2]=e1.name;
-        			System.out.print(str);
     			}else {
         			str[0]=e2.name;
         			str[1]=e1.name;
         			str[2]=e3.name;
-        			System.out.print(str);
     			}
     		}else {
     			str[0]=e3.name;
     			str[1]=e2.name;
     			str[2]=e1.name;
-    			System.out.print(str);
     		}
     	}
+		System.out.print(str[0]+" "+str[1]+" "+str[2]+"\n");
+
     }
 
     /**
@@ -182,9 +178,11 @@ public class assignment {
     public static void main(String[] args) {
         Employee a = new Employee("Jenny", 20, Gender.FEMALE, 2000);
         Employee b = new Employee("John", 30, Gender.MALE, 2500);
+//        Employee c = new Employee("Johny", 60, Gender.MALE, 8000);
         System.out.println("Before: a=" + a.getName());
         System.out.println("Before: b=" + b.getName());
         swap(a, b);
+//        sortSalary(a,b,c);
         System.out.println("After: a=" + a.getName());
         System.out.println("After: b=" + b.getName());
     }    
