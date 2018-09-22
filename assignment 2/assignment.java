@@ -157,7 +157,7 @@ public class assignment {
     /*
      write your understanding here.
      The function swap() is to swap two objects not two values. Thus, this function just swap two references, which point to the value, but not the value of the objects.
-     Thus, this function just swap the parameter, so the function only affect the references of each object, but won't affect the reference of the argument.
+     and this function just swap the parameter, so the function only affect the references of each object, but won't affect the reference of the argument.
      If the function want to swap the value, the function can swap all attributes of each object.
     
     
@@ -165,9 +165,21 @@ public class assignment {
         /*we can replace swap() function with codes below to get the wanted answer. 
          ****** The changes of the codes***********
    
-	      String temp = a.name;
+	      String tempName = a.name;
 	      a.name = b.name;
-	      b.name = temp;
+	      b.name = tempName;
+	      
+	      int tempAge = a.age;
+	      a.age = b.age;
+	      b.age = tempAge;
+	      
+	      Gender tempGender = a.gender;
+	      a.gender = b.gender;
+	      b.gender = tempGender;
+	      
+	      double tempSalary = a.salary;
+	      a.salary = b.salary;
+	      b.salary = tempSalary;
 	 
 	     * **************************
          */
