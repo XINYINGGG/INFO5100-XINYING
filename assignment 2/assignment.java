@@ -16,6 +16,7 @@ class Employee {
 
 
     public Employee(String name, int age, Gender gender, double salary) {
+	    // scores: 2/2
     		//write your code here
     	this.name=name;
     	this.age = age;
@@ -52,6 +53,7 @@ public class assignment {
      * If the salary is more than 8900, the Social Security Tax is 6.2% of 106,800.
      */
     public double socialSecurityTax(Employee employee) {
+	    // scores: 2/2
         //write your code here
     	double tax;
     	if(employee.salary <= 8900) {
@@ -70,6 +72,7 @@ public class assignment {
      * If the employee is between 50 and 60(exclusive), rate is 5% of salary; If the employee is above 60, rate is 6% of salary.
      */
     public double insuranceCoverage(Employee employee) {
+	    // scores: 2/2
         //write your code here
     	double rate;
     	if(employee.age<35) {
@@ -91,6 +94,7 @@ public class assignment {
      * John Alice Jenny
      */
     public static void sortSalary(Employee e1, Employee e2, Employee e3) {
+	    // scores: 2/2
         //write your code here
     	String[] str=new String [3];
     	if(e1.salary<=e2.salary) {
@@ -137,12 +141,18 @@ public class assignment {
      * Try to add a new method in Employee class: public void raiseSalary(double byPercent)
      */
     public static void tripleSalary(Employee employee) {
+	    // scores: 2/2
+	    // We'd better not modify the employee data in this funtion. 
+	    // In stead we'd better write a function in `Employee` class called `public void raiseSalary(double byPercent)`.
+    // Then in `tripleSalary` we just call `employee.raiseSalary(percent);`
         //write your code here
     	employee.salary = employee.salary*3;
     }
 
 
     //Extra credit
+	
+	// Great job!
 
     /**
      * I have written some code below. What I want is to swap two Employee objects.
@@ -207,3 +217,5 @@ public class assignment {
 
 
 }
+
+// Total scores: 10/10
