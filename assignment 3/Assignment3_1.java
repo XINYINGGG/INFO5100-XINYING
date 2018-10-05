@@ -2,8 +2,8 @@ package assignment3;
 
 
 class Student{
-	String name;
-	int id;
+	private String name;
+	private int id;
 	public Student(String name, int id) {
 		this.name = name;
 		this.id = id;
@@ -22,9 +22,12 @@ class Student{
 	}
 }
 class Course{
-	String courseName;
-	int numberOfStudent;
+	private String courseName;
+	private int numberOfStudent;
 	Student[] registeredStudent = new Student[10];
+	public String getCourseName() {
+		return courseName;
+	}
 	public Course(String name) {
 		this.courseName = name;
 	}
