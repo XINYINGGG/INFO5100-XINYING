@@ -1,5 +1,5 @@
 package assignment3;
-
+// score 5/5
 public abstract class MoodyObject {
 
 	public static void main(String[] args) {
