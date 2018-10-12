@@ -1,5 +1,5 @@
 package assignment3;
-
+//score 5/5
 
 class Student{
 	private String name;
